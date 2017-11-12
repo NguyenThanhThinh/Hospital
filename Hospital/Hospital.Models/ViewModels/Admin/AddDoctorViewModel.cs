@@ -1,11 +1,13 @@
-﻿using AutoMapper;
-using Hospital.Utilities;
-using System.Collections.Generic;
-using System.Web;
-using System.Web.Mvc;
+﻿
 
 namespace Hospital.Models.ViewModels.Admin
 {
+    using AutoMapper;
+    using Hospital.Utilities;
+    using System.Collections.Generic;
+    using System.Web;
+    using System.Web.Mvc;
+    using Hospital.Models;
     public class AddDoctorViewModel : IMapFrom<Doctor>, IHaveCustomMappings
     {
         public int Id { get; set; }

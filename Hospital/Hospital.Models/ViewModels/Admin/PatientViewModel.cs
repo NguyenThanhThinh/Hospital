@@ -1,11 +1,4 @@
 ﻿using Hospital.Utilities;
-using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoMapper.Configuration;
 
 namespace Hospital.Models.ViewModels.Admin
 {

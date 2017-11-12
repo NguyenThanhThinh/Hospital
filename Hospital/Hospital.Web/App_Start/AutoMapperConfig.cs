@@ -1,6 +1,4 @@
-﻿using AutoMapper;
-using Hospital.Utilities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -8,6 +6,8 @@ using System.Web;
 
 namespace Hospital.Web.App_Start
 {
+    using AutoMapper;
+    using Hospital.Utilities;
     public static class AutoMapperConfig
     {
         public static void Execute()

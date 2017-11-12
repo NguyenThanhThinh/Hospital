@@ -1,11 +1,4 @@
-﻿
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Hospital.Models
+﻿namespace Hospital.Models
 {
     using Hospital.Models.Enums;
     using Hospital.Utilities;
