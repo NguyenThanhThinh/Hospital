@@ -35,7 +35,7 @@ namespace Hospital.Data
 
                 for (int i = 0; i < 10; i++)
                 {
-                    var patient = new User()
+                    var users = new User()
                     {
                         UserName = "thanh" + i + "@thinh.com",
                         Email = "thanh" + i + "@thinh.com",
@@ -52,7 +52,7 @@ namespace Hospital.Data
                         }
                     };
 
-                    context.Users.Add(patient);
+                    context.Users.Add(users);
                 }
                 context.SaveChanges();
 
