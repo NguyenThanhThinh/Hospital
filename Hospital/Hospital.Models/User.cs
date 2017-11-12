@@ -12,8 +12,7 @@ namespace Hospital.Models
     public class User : IdentityUser
 
     {
-        private ICollection<ClinicalResult> clinicalResults;
-
+       
         public virtual ICollection<ClinicalResult> ClinicalResults { get; set; } = new HashSet<ClinicalResult>();
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<User> manager)
