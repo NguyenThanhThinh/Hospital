@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hospital.Web.App_Start;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,10 +13,22 @@ namespace Hospital.Web
     {
         protected void Application_Start()
         {
+            ViewEngines.Engines.Clear();
+
+            ViewEngines.Engines.Add(new RazorViewEngine());
+
+            AutoMapperConfig.Execute();
+           
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            //NinjectConfig.Start();
         }
+
+        //protected void Application_End()
+        //{
+        //    NinjectConfig.Stop();
+        //}
     }
 }
