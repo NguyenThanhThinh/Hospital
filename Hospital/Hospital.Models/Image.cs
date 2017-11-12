@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Hospital.Models
+﻿namespace Hospital.Models
 {
-   public class Image
+    public class Image:BaseFile
     {
     }
 }

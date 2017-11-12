@@ -5,11 +5,19 @@
     {
         private string name;
         private string description;
+        private Image image;
         private ExceptionMessage ex;
 
-        private Doctor()
+        public Doctor(string name, string description, Image image) : this()
         {
-            this.ex = new ExceptionMessage();
+            this.Name = name;
+            this.Description = description;
+            this.Image = image;
+        }
+
+        public Doctor()
+        {
+            ex = new ExceptionMessage();
         }
 
         public string Name
@@ -23,20 +31,33 @@
             }
         }
 
-        public string Descriptioname
+        public string Description
         {
-            get => description;
+            get
+            {
+                return this.description;
+            }
+
             set
             {
-                this.ex.StringExistenceValidation(value, nameof(Doctor), nameof(this.Descriptioname));
-                this.ex.StringMaxLengthValidation(value, NAME_MAX_LENGTH, nameof(this.Descriptioname));
-                this.name = value;
+                if (value == null)
+                {
+                    this.description = "No description";
+                }
+                else
+                {
+                    this.description = value;
+                }
             }
         }
 
         public virtual Speciality Specialty { get; set; }
 
-        public Image Image { get; set; }
+        public Image Image
+        {
+            get => image;
+            set => image = value;
+        }
 
     }
 }

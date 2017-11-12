@@ -9,12 +9,11 @@ namespace Hospital.Models
         {
             this.AddedOn = DateTime.Now;
         }
-
-        public virtual User Patient { get; set; }
-
         public DateTime AddedOn { get; set; }
 
         public StatusResult StatusResult { get; set; }
+
+        public virtual User Patient { get; set; }
 
         public virtual PDF File { get; set; }
     }

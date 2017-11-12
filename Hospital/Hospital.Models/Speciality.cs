@@ -19,6 +19,12 @@ namespace Hospital.Models
             this.ex = new ExceptionMessage();
         }
 
+        public Speciality(string title,string description):this()
+        {
+            this.Title = title;
+            this.Description = description;
+        }
+
         public string Title
         {
             get => title;
@@ -30,14 +36,23 @@ namespace Hospital.Models
             }
         }
 
-        public string Descriptioname
+        public string Description
         {
-            get => description;
+            get
+            {
+                return this.description;
+            }
+
             set
             {
-                this.ex.StringExistenceValidation(value, nameof(Speciality), nameof(this.Descriptioname));
-                this.ex.StringMaxLengthValidation(value, NAME_MAX_LENGTH, nameof(this.Descriptioname));
-                this.description = value;
+                if (value == null)
+                {
+                    this.description = "No description";
+                }
+                else
+                {
+                    this.description = value;
+                }
             }
         }
 
